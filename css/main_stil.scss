@@ -4,5 +4,7 @@
 @use "footer";
 @use "responsive";
 body{
-
+margin: 0px;
+font-family: variables.$font;
+color: variables.$tamnoPlava;
 }
