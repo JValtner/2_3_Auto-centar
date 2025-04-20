@@ -30,12 +30,16 @@ header nav ul li {
 header nav ul li a {
   text-decoration: none;
   font-size: 16px;
+  font-weight: bold;
 }
 header nav ul li a img {
   width: 30px;
   height: 25px;
   margin-left: 10px;
   margin-right: 10px;
+}
+header nav ul li a:hover {
+  color: #b96d34;
 }
 
 .sellers {
@@ -45,13 +49,14 @@ header nav ul li a img {
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
-  height: 300px;
+  height: auto;
+  min-height: 300px;
   align-content: start;
   justify-content: center;
-  padding-left: 15px;
 }
 .sellers h1 {
   display: block;
+  margin-left: 40px;
 }
 .sellers .locations {
   display: flex;
@@ -81,11 +86,14 @@ header nav ul li a img {
 .sellers .locations > div p span {
   color: #b96d34;
 }
+.sellers .locations > div:hover {
+  border: 1px solid #003153;
+}
 
 .cars {
   width: 100%;
-  padding: 10px;
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: flex;
 }
 .cars form {
@@ -93,6 +101,7 @@ header nav ul li a img {
   background-color: #dde0e9;
   border: 1px solid #003153;
   border-radius: 10px;
+  margin-left: 10px;
 }
 .cars .dream-car {
   display: flex;
@@ -134,10 +143,12 @@ header nav ul li a img {
   border: 1px solid #003153;
   border-radius: 15px;
   background-color: white;
+  height: 25px;
 }
 .cars .calculator input {
   border: 1px solid #003153;
   border-radius: 15px;
+  height: 25px;
   background-color: white;
 }
 .cars #car-color {
@@ -183,15 +194,17 @@ header nav ul li a img {
 
 footer {
   background-color: #003153;
-  height: 30px;
+  height: auto;
+  min-height: 30px;
   width: 100%;
   padding-top: 5px;
   padding-bottom: 5px;
   margin-top: 5px;
   display: flex;
-  align-content: flex-start;
+  align-content: center;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 }
 footer a {
   text-decoration: none;
@@ -199,8 +212,132 @@ footer a {
   margin-right: 10px;
   color: white;
 }
-footer .desni {
+footer a:nth-child(5) {
   margin-left: auto;
+}
+
+/* Header*/
+@media (max-width: 576px) {
+  header nav {
+    width: 80%;
+  }
+  header nav nav ul li {
+    font-size: smaller;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+@media (max-width: 768px) {
+  header nav {
+    width: 70%;
+  }
+  header nav nav ul li {
+    font-size: smaller;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  header nav .nav-hide, header nav .nav-more, header nav .nav-info {
+    display: none;
+  }
+  header nav:hover ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header nav:hover ul .nav-hide,
+  header nav:hover ul .nav-info,
+  header nav:hover ul .nav-more {
+    display: flex;
+  }
+}
+@media (max-width: 992px) {
+  header nav {
+    width: 90%;
+  }
+  header nav ul ul {
+    justify-content: center;
+  }
+  header nav ul ul li {
+    font-size: smaller;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+@media (max-width: 1200px) {
+  header nav {
+    width: 70%;
+  }
+  header nav ul {
+    justify-content: center;
+  }
+  header nav ul li {
+    font-size: smaller;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* Body*/
+@media (max-width: 768px) {
+  body .sellers {
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+  body .sellers h1 {
+    text-align: center;
+  }
+  body .sellers .locations {
+    flex-direction: column;
+    align-items: center;
+  }
+  body .sellers .locations > div {
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  body .cars {
+    flex-flow: column-reverse;
+  }
+  body .cars form {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  body .cars .offers {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+/* Footer*/
+@media (max-width: 768px) {
+  footer {
+    background-color: #003153;
+    flex-direction: column;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .desni {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 992px) {
+  footer {
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  footer a:nth-child(5) {
+    flex-basis: 100%;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 body {
