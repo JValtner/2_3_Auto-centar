@@ -151,6 +151,21 @@ header nav ul li a:hover {
   height: 25px;
   background-color: white;
 }
+.cars .calculator .car-color {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.cars .calculator .car-color label:nth-child(1) {
+  width: 100%;
+}
+.cars .calculator .car-color label {
+  flex-direction: row;
+  width: 50%;
+}
+.cars .calculator .car-color input type[radio] {
+  width: 50%;
+}
 .cars #car-color {
   width: 100%;
   padding: 5px;

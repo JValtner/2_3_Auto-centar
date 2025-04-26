@@ -106,6 +106,22 @@
             height: 25px;
             background-color: white;
         }
+        .car-color{
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            label:nth-child(1){
+                width: 100%;
+            }
+            label{
+                flex-direction: row;
+                width: 50%;
+            }
+            input type[radio]{
+                width: 50%;
+            }
+
+        }
     }
     #car-color{
         width: 100%;
